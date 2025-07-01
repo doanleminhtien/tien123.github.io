@@ -11,7 +11,7 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Poppins', sans-serif, 'sans-serif'; /* Fallback font */
     }
 
     body {
@@ -24,6 +24,10 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      /* Thêm background nếu có file back.jpg */
+      background-image: url('images/back.jpg');
+      background-position: center;
+      background-size: cover;
     }
 
     .profile-card {
@@ -112,6 +116,23 @@
     .buttons .btn:hover {
       box-shadow: inset 0 5px 20px rgba(0,0,0,0.4);
     }
+
+    /* Media query cho màn hình nhỏ */
+    @media (max-width: 400px) {
+      .profile-card {
+        padding: 20px;
+      }
+      .data h2 {
+        font-size: 24px;
+      }
+      .row .info {
+        padding: 0 10px;
+      }
+      .buttons .btn {
+        font-size: 14px;
+        padding: 6px 20px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -121,28 +142,9 @@
         <img src="images/image.jpg" alt="Profile" class="profile-pic">
       </div>
       <div class="data">
-        <h2>Doàn lê Minh Tiến</h2>
+        <h2>Đoàn Lê Minh Tiến</h2>
         <span>Developer & Designer</span>
       </div>
       <div class="row">
         <div class="info">
-          <h3>Following</h3>
-          <span>120</span>
-        </div>
-        <div class="info">
-          <h3>Followers</h3>
-          <span>5000</span>
-        </div>
-        <div class="info">
-          <h3>Posts</h3>
-          <span>209</span>
-        </div>
-      </div>
-      <div class="buttons">
-        <a href="#" class="btn">Message</a>
-        <a href="#" class="btn">Follow Me</a>
-      </div>
-    </div>
-  </section>
-</body>
-</html>
+          <h3>Following</
